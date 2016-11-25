@@ -33,7 +33,7 @@ function isLastWeekDay(t){
         var nextMonth = getMonth(tomorrow);
 
         if(!isWeekDay(tomorrow)){
-                    var flag = false;
+            var flag = false;
             while(!isWeekDay(tomorrow)){
                 if(isNextMonth(curMonth,getMonth(tomorrow))){
                     flag = true;
