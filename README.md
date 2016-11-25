@@ -14,3 +14,23 @@
 
 Node：程序以node.js写成，
 Linux：用crontab来配置定时任务
+
+### 用法
+修改配置文件，字段一目了然，值得说明的是如下三个字段：
+1. xuser
+  发送邮件人验证
+
+2. xpasswd
+  发送邮件人密码验证
+  
+3. mailServer
+  发送邮件服务器，如我用126的，那么可以配置为`smtp.126.com`，不同的邮件服务器可以查看对应的邮箱配置
+  
+直接运行`node index`或者`npm run test`均可，需要安装Node。
+
+设置定时任务
+设置每天的8点运行
+```
+> crontab -e
+0 8 * * *  cd ${work_dir} && npm run test
+```
