@@ -14,8 +14,6 @@ function getMonth(t){
 }
 
 function isNextMonth(curMonth,nextMonth){
-    console.log("curMonth: ",curMonth + 1);
-    console.log("nextMonth: ",nextMonth + 1);
     if(curMonth !== nextMonth){
         return true;
     }
