@@ -1,3 +1,6 @@
+var nodemailer = require('nodemailer');
+var config = require("./config");
+
 function isWeekDay(t){
     var day = new Date(t).getDay();
     if(day !== 0 && day !== 6){
@@ -64,7 +67,19 @@ function isLastWeekDay(t){
 
 function sendMail(){
     console.log("今天是月末最后一个工作日，请记得定投哦！");
-    //Todo: 使用sendMail发送邮件
+    var transporter = nodemailer.createTransport("smtps://" + config.xuser + ":" + config.xpasswd + "@" + config.mailServer);
+    var mailOptions = {
+        from: config.fromEmail,
+        to: config.toEmail,
+        subject: config.subject,
+        text: config.text
+    };
+    transporter.sendMail(mailOptions,function(err,info){
+        if(err){
+            return console.log(err);
+        }
+        console.log("Message send: ",info.response);
+    }); 
 }
 
 var today = new Date().getTime();
