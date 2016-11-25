@@ -1,0 +1,23 @@
+{
+  "name": "is-last-week-day",
+  "version": "1.0.0",
+  "description": "To judage today is last weekday this month or not.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangjh/isLastWeekDay.git"
+  },
+  "author": "njhxzhangjh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangjh/isLastWeekDay/issues"
+  },
+  "homepage": "https://github.com/zhangjh/isLastWeekDay#readme",
+  "dependencies": {
+    "nodemailer": "^2.6.4"
+  }
+}
+
