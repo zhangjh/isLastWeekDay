@@ -81,8 +81,7 @@ function sendMail(){
 }
 
 var today = new Date().getTime();
-console.log("Today: ",new Date(today).getMonth()+1,"/",new Date(today).getDate());
-
+console.log("Today: ",new Date(today).getFullYear(),"/",new Date(today).getMonth() + 1,"/"+new Date(today).getDate());
 if(isLastWeekDay(today)){
     //发送邮件提醒
     sendMail();
