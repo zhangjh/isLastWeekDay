@@ -43,10 +43,10 @@ function isLastWeekDay(t){
                 tomorrow += intervalDay;
             }
             if(flag){
-                console.log("当前不是月末最后一天，但是最后一个工作日");
+                console.log("当前不是月末最后一天，但是本月最后一个工作日");
                 return true;
             }else {
-                console.log("当前不是月末最后一天，也不是最后一个工作日");
+                console.log("当前不是月末最后一天，也不是本月最后一个工作日");
                 return false;
             }
 
@@ -54,8 +54,10 @@ function isLastWeekDay(t){
             if(isNextMonth(curMonth,nextMonth)){
                 console.log("当前是月末最后一天且为工作日");
                 return true;
-            }
-            return false;
+            }else {
+                console.log("当前不是月末最后一天，也不是最后一个工作日");
+                return false;
+			}
         }
     }else {
         console.log("当前不是工作日");
